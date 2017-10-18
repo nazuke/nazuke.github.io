@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="row">
+
+	<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+
+		{{ content }}
+
+    {% if site.disqus.shortname %}
+			{% include disqus_comments.html %}
+		{% endif %}
+
+	</div>
+
+	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+
+		<h2><a href="{{ '/blog/' | relative_url }}">Development Blog</a></h2>
+
+		<ul class="post-list">
+	    {% for post in site.posts %}
+	      <li>
+	        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	        <p>
+	          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+	        </p>
+	      </li>
+	    {% endfor %}
+	  </ul>
+
+		<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+	</div>
+
+</div>

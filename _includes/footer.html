@@ -1,0 +1,31 @@
+{% if jekyll.environment == 'production' and site.yandex_metrika.production %}
+	{% include yandex-metrika.html tracker=site.yandex_metrika.production %}
+{% elsif jekyll.environment == 'development' and site.yandex_metrika.development %}
+	{% include yandex-metrika.html tracker=site.yandex_metrika.development %}
+{% endif %}
+
+<footer class="container">
+
+	<div class="row">
+
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			<div class="contact-list">
+				{% if site.email %}
+					<p>e-mail: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+				{% endif %}
+			</div>
+
+			<div class="social-media-list">
+				{% if site.twitter_username %}
+					<p>
+						{% include icon-twitter.html username=site.twitter_username %}
+					</p>
+				{% endif %}
+			</div>
+
+		</div>
+
+	</div>
+
+</footer>
