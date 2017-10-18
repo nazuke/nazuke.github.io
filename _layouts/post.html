@@ -1,0 +1,69 @@
+---
+layout: default
+comments: true
+---
+
+<section class="row">
+
+  <article
+    class="col-xs-12 col-sm-9 col-md-9 col-lg-9"
+    itemscope
+    itemtype="http://schema.org/BlogPosting"
+  >
+
+    <header class="">
+
+      <h1 class="" itemprop="name headline">{{ page.title | escape }}</h1>
+
+      <p class="">
+        <time
+          datetime="{{ page.date | date_to_xmlschema }}"
+          itemprop="datePublished"
+        >
+          {{ page.date | date: "%b %-d, %Y" }}
+        </time>
+        {% if page.author %} •
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+          </span>
+        {% endif %}
+      </p>
+
+    </header>
+
+    <div class="" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <div class="container-adsense">
+      {% if jekyll.environment == 'production' %}
+        {% include google-adsense.html %}
+      {% else %}
+        <div>GOOGLE ADSENSE NOT INCLUDED IN DEVELOPMENT MODE</div>
+      {% endif %}
+    </div>
+
+    {% if site.disqus.shortname %}
+      {% include disqus_comments.html %}
+    {% endif %}
+
+  </article>
+
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+
+    <div>
+      <h2>Related Products</h2>
+      <div>{% include amazon-earnings.html %}</div>
+    </div>
+
+    <div>
+      {% if jekyll.environment == 'production' %}
+        {% include google-adsense.html %}
+      {% else %}
+        <div>GOOGLE ADSENSE NOT INCLUDED IN DEVELOPMENT MODE</div>
+      {% endif %}
+    </div>
+
+  </div>
+
+</section>

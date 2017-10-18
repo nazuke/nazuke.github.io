@@ -1,0 +1,64 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: SEO Macroscope
+email: seo.macroscope@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  SEO Macroscope is a free and open source website broken link checker and SEO tool for Windows.
+
+baseurl: "/SEOMacroscope" # the subpath of your site, e.g. /blog
+
+url: "https://nazuke.github.io"
+twitter_username: SEOMacroscope
+github_username:  nazuke
+disqus:
+  shortname: seomacroscope
+
+# Google Services
+google_site_verification:
+  development: J5_C9t5p0QTmUGDNYPisSQW1jE8hRn0QKf4DnlDSr_A
+  production: J5_C9t5p0QTmUGDNYPisSQW1jE8hRn0QKf4DnlDSr_A
+google_analytics:
+  development: UA-53226030-10
+  production: UA-53226030-9
+
+# Yandex Services
+yandex_site_verification:
+  development: d0a7f0ad503d5b2d
+  production: d0a7f0ad503d5b2d
+yandex_metrika:
+  development: 45909285
+  production: 45679710
+
+# Bing Services
+bing_site_verification:
+  development: 359738600A5C3D292F19866E1F240410
+  production: 359738600A5C3D292F19866E1F240410
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+
+# Releases collection
+collections:
+  collection_releases:
+    output: false

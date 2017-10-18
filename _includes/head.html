@@ -1,0 +1,64 @@
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- BEGIN: Webmaster Tools Services -->
+  {% if jekyll.environment == 'production' %}
+    {% if site.google_site_verification.production %}
+      <meta name="google-site-verification" content="{{ site.google_site_verification.production }}">
+    {% endif %}
+    {% if site.yandex_site_verification.production %}
+      <meta name="yandex-verification" content="{{ site.yandex_site_verification.production }}">
+    {% endif %}
+    {% if site.bing_site_verification.production %}
+      <meta name="msvalidate.01" content="{{ site.bing_site_verification.production }}">
+    {% endif %}
+  {% else %}
+    {% if site.google_site_verification.development %}
+      <meta name="google-site-verification" content="{{ site.google_site_verification.development }}">
+    {% endif %}
+    {% if site.yandex_site_verification.development %}
+      <meta name="yandex-verification" content="{{ site.yandex_site_verification.development }}">
+    {% endif %}
+    {% if site.bing_site_verification.development %}
+      <meta name="msvalidate.01" content="{{ site.bing_site_verification.development }}">
+    {% endif %}
+  {% endif %}
+  <!-- END: Webmaster Tools Services -->
+
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <!-- BEGIN: Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- END: Bootstrap CSS -->
+
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+
+  <link rel="alternate" href="{{ page.url | replace:'index.html','' | absolute_url }}" hreflang="en" />
+  <link rel="alternate" href="{{ page.url | replace:'index.html','' | absolute_url }}" hreflang="x-default" />
+
+  <meta name="environment" content="{{ jekyll.environment | escape }}">
+
+  {% if jekyll.environment == 'production' and site.google_analytics.production %}
+    {% include google-analytics.html tracker=site.google_analytics.production %}
+  {% elsif jekyll.environment == 'development' and site.google_analytics.development %}
+    {% include google-analytics.html tracker=site.google_analytics.development %}
+  {% endif %}
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
