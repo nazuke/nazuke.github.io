@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: SEO Macroscope
+title: "Jason Holland's Open Source Projects"
 email: seo.macroscope@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  SEO Macroscope is a free and open source website broken link checker and SEO tool for Windows.
+  Open source web development and SEO tools.
 
-baseurl: "/SEOMacroscope" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 
 url: "https://nazuke.github.io"
 twitter_username: SEOMacroscope
@@ -56,9 +56,3 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-
-
-# Releases collection
-collections:
-  collection_releases:
-    output: false

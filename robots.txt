@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://nazuke.github.io/SEOMacroscope/sitemap.xml
+Sitemap: https://nazuke.github.io/SEOMacroscope/feed.xml
 Host: https://nazuke.github.io
 
 User-agent: SEOMacroscope
