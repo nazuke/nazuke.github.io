@@ -12,4 +12,3 @@ These are a few of the interesting bits and pieces that I'm working on, and that
 ## SEO Macroscope: The Webmaster's Toolbox
 
 **[SEO Macroscope]((https://nazuke.github.io/SEOMacroscope/))** for Microsoft Windows is a free and open source website broken link checking and scanning tool, with some technical SEO functionality.
-{: .lead }
