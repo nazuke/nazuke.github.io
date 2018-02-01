@@ -6,7 +6,7 @@ description: "Open source web development and SEO tools."
 
 # Jason Holland's Open Source Projects
 
-These are a few of the interesting bits and pieces that I'm working on, and that others may find useful.
+These are a few of the interesting bits and pieces that I'm working on, maybe others may find them useful.
 {: .lead }
 
 ## SEO Macroscope: The Webmaster's Toolbox
