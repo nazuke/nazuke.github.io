@@ -56,3 +56,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
